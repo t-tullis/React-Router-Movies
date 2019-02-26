@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MovieCard from './MovieCard'
+import SavedList from './SavedList';
 
 export default class MovieList extends Component {
   constructor(props) {
@@ -25,7 +26,9 @@ export default class MovieList extends Component {
     return (
       <div className="movie-list">
         {this.state.movies.map(movie => (
-          <MovieCard key={movie.id} movie={movie} />
+          <div>
+            <MovieCard key={movie.id} movie={movie} />
+          </div>
         ))}
       </div>
     );
